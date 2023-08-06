@@ -1,0 +1,2 @@
+st_paywall==0.1.4
+streamlit==1.25.0
