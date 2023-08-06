@@ -4,7 +4,8 @@ from st_paywall import add_auth
 st.title("This is an awesome SaaS")
 st.subheader("Login it first to use it! 🤩")
 
-add_auth(required=True)
+is_authenticated = add_auth(required=True)
+st.write(is_authenticated)
 
 #after authentication, the email and subscription status is stored in session state
 st.write(st.session_state.email)
