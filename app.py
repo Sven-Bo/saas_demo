@@ -8,10 +8,6 @@ add_auth(required=True)
 
 # ONLY AFTER THE AUTHENTICATION, THE USER WILL SEE THIS ⤵
 # The email and subscription status is stored in session state.
-if st.session_state.user_subscribed:
-    st.write("🎉 Yay! You're all set and subscribed! 🎉")
-    st.write(f'By the way, your email is {st.session_state.email}... Safe with us! 🤫')
-else:
-    st.write("Hey there! 👋 You're logged in, but the real magic awaits... ✨")
-    st.write("Subscribe now to dive into the full experience! 🌟")
-
+st.write(f"Subscription Status: {st.session_state.user_subscribed}")
+st.write("🎉 Yay! You're all set and subscribed! 🎉")
+st.write(f'By the way, your email is {st.session_state.email}... Safe with us! 🤫')
